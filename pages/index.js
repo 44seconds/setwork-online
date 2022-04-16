@@ -66,13 +66,13 @@ export default function Home({ exploreData, cardsData }) {
   /* Dummy Data Fetch*/
 }
 export async function getStaticProps() {
-  const exploreData = await fetch(
-    "https://setwork.ai/new-site-data.json"
-  ).then((res) => res.json());
+  const exploreData = await fetch("https://setwork.ai/new-site-data.json").then(
+    (res) => res.json()
+  );
 
-  const cardsData = await fetch(
-    "https://setwork.ai/new-site-data.json"
-  ).then((res) => res.json());
+  const cardsData = await fetch("https://setwork.ai/new-site-data.json").then(
+    (res) => res.json()
+  );
 
   return {
     props: {
