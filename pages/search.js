@@ -4,6 +4,8 @@ import Footer from "../components/Footer";
 import { useRouter } from "next/router";
 import { format } from "date-fns";
 import InfoCard from "../components/InfoCard";
+import Map from "../components/Map";
+import "mapbox-gl/dist/mapbox-gl.css"; // <---- Very important for pins to align to map
 
 function Search({ searchResults }) {
   const router = useRouter();
@@ -55,6 +57,10 @@ function Search({ searchResults }) {
               />
             ))}
           </div>
+        </section>
+
+        <section className="hidden xl:inline-flex md:min-w-[700px]">
+          <Map searchResults={searchResults} />
         </section>
       </main>
       <Footer />
